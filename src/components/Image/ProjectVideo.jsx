@@ -1,9 +1,8 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-import Img from 'gatsby-image';
 
-const ProjectImg = ({ filename, alt }) => (
+const ProjectVideo = ({ filename, poster }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -23,20 +22,23 @@ const ProjectImg = ({ filename, alt }) => (
       }
     `}
     render={(data) => {
-      const image = data.images.edges.find((n) => n.node.relativePath.includes(filename));
+      const image = data.images.edges.find((n) => n.node.relativePath.includes(poster));
 
-      if (!image) return null;
+      if (!filename) return null;
 
       const imageFluid = image.node.childImageSharp.fluid;
-
-      return <Img alt={alt} fluid={imageFluid} />;
+      return <video muted playsInline autoPlay loop poster={imageFluid.src} >
+        <source src={filename + '.mp4'} type="video/mp4"/>
+        <source src={filename + '.webm'} type="video/webm"/>
+        Your browser does not support the video tag.
+      </video>;
     }}
   />
 );
 
-ProjectImg.propTypes = {
+ProjectVideo.propTypes = {
   filename: PropTypes.string,
-  alt: PropTypes.string,
+  poster: PropTypes.string,
 };
 
-export default ProjectImg;
+export default ProjectVideo;

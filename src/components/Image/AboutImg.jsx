@@ -24,7 +24,6 @@ const AboutImg = ({ filename, alt }) => (
     `}
     render={(data) => {
       const image = data.images.edges.find((n) => n.node.relativePath.includes(filename));
-
       if (!image) return null;
 
       const imageFixed = image.node.childImageSharp.fixed;

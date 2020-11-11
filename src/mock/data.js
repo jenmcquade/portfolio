@@ -2,64 +2,63 @@ import { nanoid } from 'nanoid';
 
 // HEAD DATA
 export const headData = {
-  title: '', // e.g: 'Name | Developer'
-  lang: '', // e.g: en, es, fr, jp
-  description: '', // e.g: Welcome to my website
+  title: 'Jen McQuade', // e.g: 'Name | Developer'
+  lang: 'en', // e.g: en, es, fr, jp
+  description: 'Welcome to my portfolio', // e.g: Welcome to my website
 };
 
 // HERO DATA
 export const heroData = {
   title: '',
-  name: '',
-  subtitle: '',
-  cta: '',
+  name: 'Jen McQuade',
+  subtitle: 'I\'m a Full Stack Web Developer',
+  cta: 'Learn more',
 };
 
 // ABOUT DATA
 export const aboutData = {
-  img: 'profile.jpg',
-  paragraphOne: '',
-  paragraphTwo: '',
-  paragraphThree: '',
-  resume: 'https://www.resumemaker.online/es.php', // if no resume, the button will not show up
+  img: 'clover.jpg',
+  paragraphOne: `Hello, I'm Jen. I'm a Full Stack Web developer with a decade of experience building unique, branded Web sites and promotional emails in high-volume, fast-paced software sprints.`,
+  paragraphTwo: `I also have over five years of experience using JavaScript and PHP in Content Management Systems like Drupal and WordPress. This has included huge production site migrations, landing pages and single page application construction and module development.`,
+  paragraphThree: `I also love Podcasting and writing, continued education, and playing guitar.`,
+  resume: 'jen-mcquade-frontend.pdf', // if no resume, the button will not show up
 };
 
 // PROJECTS DATA
 export const projectsData = [
   {
     id: nanoid(),
-    img: 'project.jpg',
-    title: '',
-    info: '',
-    info2: '',
-    url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
+    img: 'cube.jpg',
+    video: 'cube',
+    title: 'Instagram Cube',
+    info: 'This is a ReactJS and Redux demonstration project with Instagram integration.',
+    info2: `It uses the NPM package 'styled-components' to create three dimensional styles and animations. A React component calls to an Amazon Gateway in order to proxy Instagram's graphql services. Redux is used to maintain the state of styles and history of menu actions.`,
+    url: 'https://cube.jmcquade.com',
+    repo: 'https://github.com/jenmcquade/rubix-demos', // if no repo, the button will not show up
   },
   {
     id: nanoid(),
-    img: 'project.jpg',
-    title: '',
-    info: '',
-    info2: '',
-    url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
+    img: 'eks.jpg',
+    title: 'Evil Kitteh Studios',
+    info: 'A custom WordPress theme built in mid-2018 for Sean Hall, a local comic artist.',
+    info2: 'The site uses a mobile-optimized template with a customized backend for publishing. The theme\'s design was created by me, using assets provided by Sean.',
+    url: 'https://www.evilkittehstudios.com',
   },
   {
     id: nanoid(),
-    img: 'project.jpg',
-    title: '',
-    info: '',
-    info2: '',
-    url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
+    img: 'mount-angel-abbey.jpg',
+    title: 'Mount Angel Abbey',
+    info: 'A custom WordPress theme developed under contract for SiteCrafting, Tacoma, WA.',
+    info2: 'This responsive theme was built in January, 2019, using SiteCrafting\'s custom frontend and backend tools. Design was provided by the client.',
+    url: 'https://www.mountangelabbey.com',
   },
 ];
 
 // CONTACT DATA
 export const contactData = {
-  cta: '',
+  cta: 'Ready to build great things together?',
   btn: '',
-  email: '',
+  email: 'jen.k.mcquade@gmail.com',
 };
 
 // FOOTER DATA
@@ -73,22 +72,17 @@ export const footerData = {
     {
       id: nanoid(),
       name: 'codepen',
-      url: '',
-    },
-    {
-      id: nanoid(),
-      name: 'linkedin',
-      url: '',
+      url: 'https://codepen.io/JenMcQuade',
     },
     {
       id: nanoid(),
       name: 'github',
-      url: '',
+      url: 'https://github.com/jenmcquade',
     },
   ],
 };
 
 // Github start/fork buttons
 export const githubButtons = {
-  isEnabled: true, // set to false to disable the GitHub stars/fork buttons
+  isEnabled: false, // set to false to disable the GitHub stars/fork buttons
 };

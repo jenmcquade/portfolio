@@ -5,12 +5,14 @@ import { Container, Row, Col } from 'react-bootstrap';
 import PortfolioContext from '../../context/context';
 import Title from '../Title/Title';
 import ProjectImg from '../Image/ProjectImg';
+import ProjectVideo from '../Image/ProjectVideo';
 
 const Projects = () => {
   const { projects } = useContext(PortfolioContext);
 
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  let preview = '';
 
   useEffect(() => {
     if (window.innerWidth > 769) {
@@ -28,7 +30,18 @@ const Projects = () => {
         <div className="project-wrapper">
           <Title title="Projects" />
           {projects.map((project) => {
-            const { title, info, info2, url, repo, img, id } = project;
+            const { title, info, info2, url, repo, img, video, id } = project;
+            if (project.video === '' || typeof(project.video) === 'undefined') {
+              preview = 
+                <div data-tilt className="thumbnail rounded">
+                  <ProjectImg alt={title} filename={img} />
+                </div>
+            } else {
+              preview = 
+                <div data-tilt className="video-thumb">
+                  <ProjectVideo filename={video} poster={img}/>
+                </div>
+            }
 
             return (
               <Row key={id}>
@@ -86,23 +99,22 @@ const Projects = () => {
                         aria-label="Project Link"
                         rel="noopener noreferrer"
                       >
-                        <Tilt
-                          options={{
-                            reverse: false,
-                            max: 8,
-                            perspective: 1000,
-                            scale: 1,
-                            speed: 300,
-                            transition: true,
-                            axis: null,
-                            reset: true,
-                            easing: 'cubic-bezier(.03,.98,.52,.99)',
-                          }}
-                        >
-                          <div data-tilt className="thumbnail rounded">
-                            <ProjectImg alt={title} filename={img} />
-                          </div>
-                        </Tilt>
+                      <Tilt
+                        options={{
+                          reverse: false,
+                          max: 8,
+                          perspective: 1000,
+                          scale: 1,
+                          speed: 300,
+                          transition: true,
+                          axis: null,
+                          reset: true,
+                          easing: 'cubic-bezier(.03,.98,.52,.99)',
+                        }}
+                      >
+                        {preview}
+                      </Tilt>
+                      
                       </a>
                     </div>
                   </Fade>
