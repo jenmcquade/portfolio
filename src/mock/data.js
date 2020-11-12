@@ -18,8 +18,8 @@ export const heroData = {
 // ABOUT DATA
 export const aboutData = {
   img: 'clover.jpg',
-  paragraphOne: `Hello, I'm Jen. I'm a Full Stack Web developer with a decade of experience building unique, branded Web sites and promotional emails in high-volume, fast-paced software sprints.`,
-  paragraphTwo: `I also have over five years of experience using JavaScript and PHP in Content Management Systems like Drupal and WordPress. This has included huge production site migrations, landing pages and single page application construction and module development.`,
+  paragraphOne: `I'm a Full Stack Web developer with a decade of experience building unique, branded Web sites and promotional emails in high-volume, fast-paced software sprints.`,
+  paragraphTwo: `I have over five years of experience using JavaScript and PHP in Content Management Systems like Drupal and WordPress. Some of this work has included implementing large production site migrations, constructing campaign landing pages and single page applications, and custom module development.`,
   paragraphThree: `I also love Podcasting and writing, continued education, and playing guitar.`,
   resume: 'jen-mcquade-frontend.pdf', // if no resume, the button will not show up
 };
@@ -57,7 +57,7 @@ export const projectsData = [
 // CONTACT DATA
 export const contactData = {
   cta: 'Ready to build great things together?',
-  btn: '',
+  btn: 'Send',
   email: 'jen.k.mcquade@gmail.com',
 };
 
@@ -67,7 +67,7 @@ export const footerData = {
     {
       id: nanoid(),
       name: 'twitter',
-      url: '',
+      url: 'http://twitter.com/mcquadejen',
     },
     {
       id: nanoid(),
