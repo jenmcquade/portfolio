@@ -59,6 +59,11 @@
       margin-bottom: 2.5rem;
     }
 
+    .grecaptcha-badge {
+      margin: 2em auto;
+      position: inherit !important;
+    }
+
     &__text,
     button {
       font-size: 2.4rem;
