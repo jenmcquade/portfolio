@@ -59,6 +59,8 @@ export const contactData = {
   cta: 'Ready to build great things together?',
   btn: 'Send',
   email: 'jen.k.mcquade@gmail.com',
+  postApiUrl: 'https://api.jmcquade.com/contact',
+  captchaSiteKey: '6LeD9eEZAAAAADAGDzn3tcg2DFy0db3md1onza_s'
 };
 
 // FOOTER DATA

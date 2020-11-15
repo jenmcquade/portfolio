@@ -20,7 +20,6 @@ export default function HTML({
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         {headComponents}
-        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `

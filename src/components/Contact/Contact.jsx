@@ -9,7 +9,9 @@ const recaptchaRef = React.createRef();
 
 const Contact = () => {
   const { contact } = useContext(PortfolioContext);
-  const { cta, btn } = contact;
+  const { cta, btn, postApiUrl, captchaSiteKey } = contact;
+
+  console.log(cta);
 
   let addContactFormActions = function() {
     let form = document.querySelector('#contactForm');
@@ -25,16 +27,11 @@ const Contact = () => {
   }
 
   let onContactFormCaptchaApproval = (token) => {
-    const URL = "https://a81a99f6fa.execute-api.us-west-2.amazonaws.com/Prod/contact";
     const name = document.querySelector('#contactName').value;
     const email = document.querySelector('#contactEmail').value;
     const message = document.querySelector('#contactMessage').value;
-    const data = {
-      name: name,
-      email: email,
-      message: message
-    };
-    fetch(URL, {
+    const data = { name, email, message };
+    fetch(postApiUrl, {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
@@ -94,7 +91,7 @@ const Contact = () => {
                 ref={recaptchaRef}
                 size="invisible"
                 data-badge="inline"
-                sitekey="6LeD9eEZAAAAADAGDzn3tcg2DFy0db3md1onza_s"
+                sitekey={captchaSiteKey || ' '}
                 onChange={onContactFormCaptchaApproval}
               />
             </form>
