@@ -19,7 +19,7 @@ const GithubButton = () => (
       data-icon="octicon-star"
       data-size="large"
       data-show-count="true"
-      aria-label="Star Fork jenmcquade/portfolio on GitHub"
+      aria-label="Star jenmcquade/portfolio on GitHub"
     >
       Star
     </GitHubButton>
