@@ -42,7 +42,7 @@ export const projectsData = [
     title: 'Mount Angel Abbey',
     info: 'A custom WordPress theme developed under contract for SiteCrafting, Tacoma, WA.',
     info2: 'This responsive theme was built in January, 2019, using SiteCrafting\'s custom frontend and backend tools. Design was provided by the client.',
-    url: 'https://www.mountangelabbey.com'
+    url: 'https://www.mountangelabbey.org'
   },
   {
     id: nanoid(),
