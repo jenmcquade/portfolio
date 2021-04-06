@@ -1,11 +1,11 @@
-import { nanoid } from 'nanoid'
+import { nanoid } from 'nanoid';
 
 // HEAD DATA
 export const headData = {
   title: 'Jen McQuade', // e.g: 'Name | Developer'
   lang: 'en', // e.g: en, es, fr, jp
   description: 'Welcome to my portfolio' // e.g: Welcome to my website
-}
+};
 
 // HERO DATA
 export const heroData = {
@@ -13,7 +13,7 @@ export const heroData = {
   name: 'Jen McQuade',
   subtitle: 'I\'m a Full Stack Web Developer',
   cta: 'Learn more'
-}
+};
 
 // ABOUT DATA
 export const aboutData = {
@@ -22,7 +22,7 @@ export const aboutData = {
   paragraphTwo: 'I have over five years of experience using JavaScript and PHP in Content Management Systems like Drupal and WordPress. Some of this work has included implementing large production site migrations, constructing campaign landing pages and single page applications, and custom module development.',
   paragraphThree: 'I also love Podcasting and writing, continued education, and playing guitar.',
   resume: 'jen-mcquade-frontend.pdf' // if no resume, the button will not show up
-}
+};
 
 // PROJECTS DATA
 export const projectsData = [
@@ -53,7 +53,7 @@ export const projectsData = [
     url: 'https://www.evilkittehstudios.com',
     repo: 'https://github.com/jenmcquade/evil-kitteh-studios'
   }
-]
+];
 
 // CONTACT DATA
 export const contactData = {
@@ -62,7 +62,7 @@ export const contactData = {
   email: 'jen.k.mcquade@gmail.com',
   postApiUrl: 'https://api.jmcquade.com/contact',
   captchaSiteKey: '6LeD9eEZAAAAADAGDzn3tcg2DFy0db3md1onza_s'
-}
+};
 
 // FOOTER DATA
 export const footerData = {
@@ -83,9 +83,9 @@ export const footerData = {
       url: 'https://github.com/jenmcquade'
     }
   ]
-}
+};
 
 // Github start/fork buttons
 export const githubButtons = {
   isEnabled: false // set to false to disable the GitHub stars/fork buttons
-}
+};

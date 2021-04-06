@@ -11,4 +11,7 @@ parserOptions:
   sourceType: module
 plugins:
   - react
-rules: {}
+rules: {
+  "semi": [2, "always"],
+  "no-trailing-spaces": 0,
+}

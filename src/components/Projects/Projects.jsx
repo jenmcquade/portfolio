@@ -31,16 +31,16 @@ const Projects = () => {
           <Title title="Projects" />
           {projects.map((project) => {
             const { title, info, info2, url, repo, img, video, id } = project;
-            if (project.video === '' || typeof(project.video) === 'undefined') {
+            if (project.video === '' || typeof project.video === 'undefined') {
               preview = 
                 <div data-tilt className="thumbnail rounded">
                   <ProjectImg alt={title} filename={img} />
-                </div>
+                </div>;
             } else {
               preview = 
                 <div data-tilt className="video-thumb">
                   <ProjectVideo filename={video} poster={img}/>
-                </div>
+                </div>;
             }
 
             return (
@@ -109,7 +109,7 @@ const Projects = () => {
                           transition: true,
                           axis: null,
                           reset: true,
-                          easing: 'cubic-bezier(.03,.98,.52,.99)',
+                          easing: 'cubic-bezier(.03,.98,.52,.99)'
                         }}
                       >
                         {preview}
