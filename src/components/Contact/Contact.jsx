@@ -13,8 +13,8 @@ const Contact = () => {
 
   console.log(cta);
 
-  let addContactFormActions = function() {
-    let form = document.querySelector('#contactForm');
+  const addContactFormActions = function () {
+    const form = document.querySelector('#contactForm');
     form.addEventListener('submit', (event) => {
       event.preventDefault();
       if (form.checkValidity() === false) {
@@ -24,31 +24,31 @@ const Contact = () => {
       }
       form.classList.add('was-validated');
     }, false);
-  }
+  };
 
-  let onContactFormCaptchaApproval = (token) => {
+  const onContactFormCaptchaApproval = (token) => {
     const name = document.querySelector('#contactName').value;
     const email = document.querySelector('#contactEmail').value;
     const message = document.querySelector('#contactMessage').value;
     const data = { name, email, message };
     fetch(postApiUrl, {
       headers: {
-        'Accept': 'application/json',
+        Accept: 'application/json',
         'Content-Type': 'application/json'
       },
       method: 'POST',
       body: JSON.stringify(data)
     })
-    .then(() => {
-      let submitBtn = document.querySelector('#contactSubmit');
-      submitBtn.innerText = 'Thanks for your message!';
-      submitBtn.setAttribute('disabled', true);
-      submitBtn.classList.add('disabled');
-    })
-    .catch(err => {
-      console.error(err);
-    });
-  }
+      .then(() => {
+        const submitBtn = document.querySelector('#contactSubmit');
+        submitBtn.innerText = 'Thanks for your message!';
+        submitBtn.setAttribute('disabled', true);
+        submitBtn.classList.add('disabled');
+      })
+      .catch(err => {
+        console.error(err);
+      });
+  };
 
   useEffect(() => {
     addContactFormActions();
