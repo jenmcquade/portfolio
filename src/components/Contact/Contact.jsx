@@ -26,7 +26,7 @@ const Contact = () => {
     }, false);
   };
 
-  const onContactFormCaptchaApproval = (token) => {
+  const onContactFormCaptchaApproval = () => {
     const name = document.querySelector('#contactName').value;
     const email = document.querySelector('#contactEmail').value;
     const message = document.querySelector('#contactMessage').value;

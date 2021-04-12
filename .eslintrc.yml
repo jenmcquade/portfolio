@@ -1,9 +1,14 @@
+parser: babel-eslint
+settings: 
+  react:
+    version: "detect"
 env:
+  node: true
   browser: true
   es2020: true
 extends:
-  - 'plugin:react/recommended'
-  - standard
+  - plugin:react/recommended
+  - eslint:recommended
 parserOptions:
   ecmaFeatures:
     jsx: true
@@ -11,8 +16,10 @@ parserOptions:
   sourceType: module
 plugins:
   - react
+  - jsx-a11y
 rules: {
   "semi": [2, "always"],
   "no-trailing-spaces": 0,
   "quote-props": [1, "as-needed"],
+  "react/display-name": 0
 }

@@ -5,13 +5,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function HTML({
+export default function HTML ({
   htmlAttributes,
   headComponents,
   bodyAttributes,
   preBodyComponents,
   postBodyComponents,
-  body,
+  body
 }) {
   return (
     <html {...htmlAttributes}>
@@ -24,7 +24,7 @@ export default function HTML({
           dangerouslySetInnerHTML={{
             __html: `
 
-              `,
+              `
           }}
         />
       </head>
@@ -43,5 +43,5 @@ HTML.propTypes = {
   bodyAttributes: PropTypes.object,
   preBodyComponents: PropTypes.array,
   body: PropTypes.string,
-  postBodyComponents: PropTypes.array,
+  postBodyComponents: PropTypes.array
 };
