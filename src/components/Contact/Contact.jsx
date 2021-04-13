@@ -11,8 +11,6 @@ const Contact = () => {
   const { contact } = useContext(PortfolioContext);
   const { cta, btn, postApiUrl, captchaSiteKey } = contact;
 
-  console.log(cta);
-
   const addContactFormActions = function () {
     const form = document.querySelector('#contactForm');
     form.addEventListener('submit', (event) => {

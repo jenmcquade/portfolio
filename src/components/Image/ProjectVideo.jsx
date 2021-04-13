@@ -12,9 +12,7 @@ const ProjectVideo = ({ filename, poster }) => (
               relativePath
               name
               childImageSharp {
-                fluid(maxWidth: 1366) {
-                  ...GatsbyImageSharpFluid
-                }
+                gatsbyImageData(layout: CONSTRAINED, width: 1366)
               }
             }
           }
@@ -26,7 +24,7 @@ const ProjectVideo = ({ filename, poster }) => (
 
       if (!filename) return null;
 
-      const imageFluid = image.node.childImageSharp.fluid;
+      const imageFluid = image.node.childImageSharp.gatsbyImageData;
       return <video preload="auto" muted playsInline autoPlay loop poster={imageFluid.src} >
         <source src={filename + '.mp4'} type="video/mp4"/>
         <source src={filename + '.webm'} type="video/webm"/>
