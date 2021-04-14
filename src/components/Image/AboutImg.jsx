@@ -6,8 +6,8 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 const AboutImg = ({ filename, alt }) => (
   <StaticQuery
     query={graphql`
-      query {
-        images: allFile {
+      {
+        images: allFile( filter: { internal: { mediaType: { regex: "/image/" } } } ) {
           edges {
             node {
               relativePath

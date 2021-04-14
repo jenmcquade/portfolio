@@ -6,7 +6,7 @@ const ProjectVideo = ({ filename, poster }) => (
   <StaticQuery
     query={graphql`
       query {
-        images: allFile {
+        images: allFile( filter: { internal: { mediaType: { regex: "/image/" } } } ) {
           edges {
             node {
               relativePath
